@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2? family= Eagle+Lake & display=swap');
+
+*{
+    font-family:'Eagle Lake', cursive;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #303030;
+}
+
+h2{
+    position: relative;
+    font-size: 4em;
+    color: #222;
+}
+
+h2::before{
+    content: attr(date_text);
+    display: flex;
+    color: #3c873a;
+    width: 370px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-inline-end: 3px solid #598767;
+    animation: animate 6s linear infinite;
+    filter: drop-shadow(0 0 20px #568452) drop-shadow(0 0 50px  #568452);
+
+}
+
+@keyframes animate {
+    0%, 10%, 100%{
+        width: 0;
+    }
+    70%, 90%{
+        width: 100%;
+    }
+}
